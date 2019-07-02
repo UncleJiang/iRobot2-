@@ -1,0 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Audiowide);
+@import url(https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei);
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Audiowide', Helvetica,'ZCOOL XiaoWei', serif!important;
+  -webkit-font-smoothing: antialiased;
+}

@@ -1,0 +1,270 @@
+.App {
+  height: 100vh;
+  background: repeating-linear-gradient(0deg, #000, #000 2px, #020 2px, #020 4px);
+  overflow: hidden;
+}
+
+.bg {
+  position: relative;
+  z-index: 0;
+  height: 100%;
+  border: 1px solid #2DE0DD;
+  box-shadow: 0px 0px 15px #447B82;
+  background: rgba(60,115,114,.6);
+  opacity: .9;
+}
+
+.day-bg {
+  position: relative;
+  z-index: 0;
+  height: 100%;
+  border: 1px solid #2DE0DD;
+  box-shadow: 0px 0px 15px #447B82;
+  background: rgba(205, 255, 254, 0.932);
+  opacity: .9;
+}
+
+.bar{
+  position: absolute;
+  background: #2DE0DD;
+  box-shadow: 0px 0px 0 #2DE0DD,
+    0px 0px 4px #2DE0DD,
+    0px 0px 8px #2DE0DD,
+    0px 0px 16px #FFF;
+  border-radius: 4px;
+}
+
+.day-bar{
+  position: absolute;
+  background: #68d9f8;
+  box-shadow: 0px 0px 0 #68d9f8,
+    0px 0px 4px #68d9f8,
+    0px 0px 8px #68d9f8,
+    0px 0px 16px #FFF;
+  border-radius: 4px;
+}
+
+.left{
+  width: 2px;
+  animation: talkbox-left 10s linear infinite;
+}
+
+.top{
+  height: 2px;
+  animation: talkbox-top 10s linear infinite;
+}
+
+.right{
+  width: 2px;
+  animation: talkbox-right 5s linear infinite;
+}
+
+.bottom{
+  height: 2px;
+  animation: talkbox-bottom 5s linear infinite;
+}
+
+.topbar {
+  position: relative;
+  top: 0;
+  z-index: 2;
+  height: 45px;
+  background-color: rgba(0, 0, 0, 0.65);
+  text-align: center;
+  -webkit-app-region: drag;
+}
+
+.day-topbar {
+  position: relative;
+  top: 0;
+  z-index: 2;
+  height: 45px;
+  background-color: rgba(84, 230, 227, 0.816);
+  text-align: center;
+  -webkit-app-region: drag;
+}
+
+.sun {
+  position: absolute;
+  z-index: 3;
+  top: 8px;
+  left: 10px;
+  height: 20px;
+  color: #e8e8e8;
+  cursor: pointer;
+  -webkit-app-region: no-drag;
+}
+
+.day-sun {
+  position: absolute;
+  z-index: 3;
+  top: 8px;
+  left: 10px;
+  height: 20px;
+  color: #e8db0b;
+  cursor: pointer;
+  -webkit-app-region: no-drag;
+}
+.face {
+  width: 50px;
+  height: 50px;
+  margin-top: 5px;
+  background: #ffffff;
+  border-radius: 50%;
+  border: 10px solid #0c1d16;
+}
+
+.day-face {
+  width: 50px;
+  height: 50px;
+  margin-top: 5px;
+  background: #ffffff;
+  border-radius: 50%;
+  border: 10px solid rgba(84, 230, 227, 0.816);
+}
+
+.closeBtn {
+  position: absolute;
+  z-index: 3;
+  top: 8px;
+  right: 8px;
+  height: 16px;
+  color: #e8e8e8;
+  cursor: pointer;
+  -webkit-app-region: no-drag;
+}
+
+.bottomBox {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  height: 50px;
+  padding: 0 4px;
+  background-color: #ffffff;
+}
+
+.microBtn {
+  height: 30px;
+  margin: 0 16px 0 4px;
+  cursor: pointer;
+}
+
+.microing {
+  width: 240px;
+  height: 20px;
+  padding: 4px;
+  line-height: 20px;
+  text-align: center;
+  color: #707070;
+  border: 1px solid #e8e8e8;
+  cursor: pointer;
+}
+
+.textarea {
+  width: 240px;
+  height: 20px;
+  margin-right: 4px;
+  border: none;
+  border-bottom: 1px solid #cccccc;
+  transition: all .6s;
+}
+
+.textarea:focus {
+  outline: none;
+  border-bottom: 1px solid #1296db;
+}
+
+.sendBtn {
+  width: 30px;
+  margin: 0 8px;
+  color: #707070;
+  cursor: pointer;
+}
+
+.wordsBox {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 80%;
+  padding: 10px 0 80px 0;
+  overflow: scroll;
+}
+
+.wordsBox::-webkit-scrollbar {
+  width: 0;
+}
+
+.wordsWrapper {
+  padding: 12px 8px;
+  clear: both;
+}
+
+.myface {
+  float: right;
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.words{
+  display: inline-block;
+  margin: 12px 8px;
+  padding: 4px 8px;
+  border:1px solid #2DE0DD;
+  border-radius: 8px;
+  color: #2DE0DD;
+}
+
+.myWords {
+  float: right;
+  color: #1890ff;
+  background-color: #fff;
+}
+
+.day-words{
+  display: inline-block;
+  margin: 12px 8px;
+  padding: 4px 8px;
+  border:1px solid #1890ff;
+
+  border-radius: 8px;
+  color: #1890ff;
+}
+
+.robotface {
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+@keyframes talkbox-left{
+  0%  {height: 0; top: 100%; left: 0;}
+  20% {height: 100%; top: 0; left: 0;}
+  40% {height: 0; top: 0; left: 0;}
+}
+
+@keyframes talkbox-top{
+  0%  {width: 0; top: 0; left: 0;}
+  20% {width: 0; top: 0; left: 0;}
+  40% {width: 100%; top: 0; left: 0;}
+  60% {width: 0; top:0; left: 100%;}
+}
+
+@keyframes talkbox-right{
+  0%  {height: 0; top: 0; left: 100%;}
+  40% {height: 0; top: 0; left: 100%;}
+  60% {height: 100%; top: 0; left: 100%;}
+  80% {height: 0; top: 100%;left: 100%;}
+}
+
+@keyframes talkbox-bottom{
+  0%  {width: 0; top: 100%; left: 100%;}
+  60% {width: 0; top: 100%; left: 100%;}
+  80% {width: 100%; top:100%; left: 0px;}
+  100% {width: 0px; top:100%; left: 0px;}
+}
